@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MiniMatti Liefershop</title>
+  <style>
+    body {
+      background: #101827;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px 16px;
+    }
+    .box {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 24px;
+      background: #1e293b;
+      border-radius: 18px;
+    }
+    input, button {
+      padding: 12px;
+      margin: 8px;
+      border-radius: 8px;
+      border: none;
+    }
+    button {
+      background: #f59e0b;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>🛒 MiniMatti Liefershop</h1>
+    <p>Willkommen! Bitte gib das Passwort ein.</p>
+    <form id="login">
+      <input id="password" type="password"
+        placeholder="Passwort" required>
+      <button type="submit">Öffnen</button>
+    </form>
+    <p id="message"></p>
+  </div>
+
+  <script>
+    document.getElementById("login").addEventListener(
+      "submit", function(event) {
+        event.preventDefault();
+        document.getElementById("message").textContent =
+          "Die Demo ist fertig. Sicherer Passwortschutz folgt!";
+      }
+    );
+  </script>
+</body>
+</html>
